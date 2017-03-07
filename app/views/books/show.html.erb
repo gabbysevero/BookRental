@@ -9,6 +9,8 @@
 	</div>
 
 	<ul class="nav navbar-nav navbar-right">
+
+	<% if user_signed_in? %>
 	<li><%= link_to "Rent this Book?", new_book_path %></li>	</ul>
 
 	<div class="col-md-8">
@@ -42,7 +44,6 @@
 
 	<%= link_to "Edit", edit_book_path(@book) %>
 	<%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?" } %>
-
 
 	<% end %>
 
