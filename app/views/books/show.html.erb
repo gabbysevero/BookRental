@@ -7,11 +7,10 @@
 		<br>
 	
 	</div>
-
-	<ul class="nav navbar-nav navbar-right">
 	<% if user_signed_in? %>
+	<ul class="nav navbar-nav navbar-right">
 	<li><%= link_to "Rent this Book?", new_book_path %></li>	</ul>
-
+	<%end%>
 	<div class="col-md-8">
 
 	<div class="book-info">

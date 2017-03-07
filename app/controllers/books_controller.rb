@@ -4,7 +4,6 @@ class BooksController < ApplicationController
 	def find
     @str = params[:search_string]
     @books = Book.where(title:@str)
-    @books = Book.where(author:@str)
 
 
     render "books/index"
