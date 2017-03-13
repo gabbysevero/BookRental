@@ -2,10 +2,8 @@ class BooksController < ApplicationController
 	before_action :find_book, only: [:show, :edit, :update, :destroy]
 	
 	def find
-    @str = params[:search_string]
-    @books = Book.where(title:@str)
-    @books = Book.where(author:@str)
-
+	@str = params[:search_string]
+    @books = Book.where(title: @str)
 
     render "books/index"
   	end
