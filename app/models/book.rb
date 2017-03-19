@@ -2,8 +2,8 @@ class Book < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :category
 	
-	validates :title, presence:true
-	validates :author, presence:true
+	validates :title, presence:true, format: {with: /[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]/}
+	validates :author, presence:true, format: {with: /[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]/}
 	validates :price, presence:true
 	validates :description, presence:true
 	validates :created_at, presence:true
